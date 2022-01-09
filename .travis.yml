@@ -18,7 +18,7 @@ before_install:
   - docker build -t mbull93/react-test -f ./client/Dockerfile.dev ./client
 
 script: 
-  - docker run mbull93/react-test npm test -- --coverage
+  - docker run -e CI=true mbull93/react-test npm test
 
 deploy:
   provider: script
