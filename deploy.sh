@@ -1,6 +1,6 @@
-docker build -f ./client/Dockerfile ./client -t mbull93/k8s-client:latest -t mbull93/k8s-client:$SHA
-docker build -f ./server/Dockerfile ./server -t mbull93/k8s-server:latest -t mbull93/k8s-server:$SHA
-docker build -f ./worker/Dockerfile ./worker -t mbull93/k8s-worker:latest -t mbull93/k8s-worker:$SHA
+docker build -t mbull93/k8s-client:latest -t mbull93/k8s-client:$SHA -f ./client/Dockerfile ./client 
+docker build -t mbull93/k8s-server:latest -t mbull93/k8s-server:$SHA -f ./server/Dockerfile ./server 
+docker build -t mbull93/k8s-worker:latest -t mbull93/k8s-worker:$SHA -f ./worker/Dockerfile ./worker 
 
 docker push mbull93/k8s-client:latest
 docker push mbull93/k8s-server:latest
